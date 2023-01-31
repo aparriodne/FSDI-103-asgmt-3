@@ -1,60 +1,50 @@
 
 
 function calculator(){
-let op = prompt("Select an operation:( +, -, *, / ) then press ok.");
+    let num1 = Number(prompt("Seclect number and press ok"));
+    let op = prompt("Select an operation:( +, -, *, / ) then press ok.");
+    let num2 = Number(prompt("Seclect number and press ok"));
 switch (op){
-    case '+' : sum();
+    case '+' : sum(num1,num2);
     break;
-    case '-' : sub();
+    case '-' : sub(num1,num2);
     break;
-    case '*' : mult();
+    case '*' : mult(num1,num2);
     break;
-    case '/' : div();
+    case '/' : div(num1,num2);
     break;
 
 };
 };
 
-function sum(){
+function sum(a,b){
     console.log("Calculator");
-    let num1 = Number(prompt("Seclect number and press ok"));
-    let num2 = Number(prompt("Seclect number and press ok"));
-    let product = num1+num2
     
     document.getElementById("answer").innerHTML=`
-    <p>${num1} + ${num2} = ${product}</p>
+    <p>${a} + ${b} = ${a+b}</p>
     `
 };
-function sub(){
+function sub(a,b){
     console.log("Calculator");
-    let num1 = Number(prompt("Seclect number and press ok"));
-    let num2 = Number(prompt("Seclect number and press ok"));
-    let product = num1-num2
     
     document.getElementById("answer").innerHTML=`
-    <p>${num1} - ${num2} = ${product}</p>
+    <p>${a} - ${b} = ${a-b}</p>
 
     `
 };
-function mult(){
+function mult(a,b){
     console.log("Calculator");
-    let num1 = Number(prompt("Seclect number and press ok"));
-    let num2 = Number(prompt("Seclect number and press ok"));
-    let product = num1*num2
     
     document.getElementById("answer").innerHTML=`
-    <p>${num1} x ${num2} = ${product}</p>
+    <p>${a} x ${b} = ${a*b}</p>
 
     `
 };
-function div(){
+function div(a,b){
     console.log("Calculator");
-    let num1 = Number(prompt("Seclect number and press ok"));
-    let num2 = Number(prompt("Seclect number and press ok"));
-    let product = num1/num2
     
     document.getElementById("answer").innerHTML=`
-    <p>${num1} / ${num2} = ${product}</p>
+    <p>${a} / ${b} = ${a/b}</p>
 
     `
 };
